@@ -1,8 +1,7 @@
 Cmnd_Alias  POWER       =   /usr/bin/shutdown -h now, /usr/bin/halt, /usr/bin/poweroff, /usr/bin/reboot
 Cmnd_Alias  STORAGE     =   /usr/bin/mount -o nosuid\,nodev\,noexec, /usr/bin/umount
 Cmnd_Alias  KILL        =   /usr/bin/kill, /usr/bin/killall
-
-Cmnd_Alias  SHELL       =   /usr/bin/zsh, /usr/bin/bash, /usr/bin/fish
+Cmnd_Alias  SHELL       =   /bin/bash, /usr/bin/zsh, /usr/bin/fish
 
 Cmnd_Alias  SYSTEMD     =   /usr/bin/journalctl, /usr/bin/systemctl
 Cmnd_Alias  FIREWALL    =   /usr/bin/iptables, /usr/bin/ip6tables
@@ -13,4 +12,4 @@ Cmnd_Alias  PKGMAN      =   {{ conf.pkgman }}
 %network    ALL         =   (root)  NETWORK
 %storage    ALL         =   (root)  STORAGE
 admin       ALL         =   (root)  SYSTEMD, KILL, FIREWALL
-devel	      ALL         =   (root)  PKGMAN
+devel	    ALL         =   (root)  PKGMAN

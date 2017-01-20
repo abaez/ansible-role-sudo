@@ -1,5 +1,5 @@
 ---
-- name: making sure sudo is installed
+- name: making sure sudo is installed and configured
   include: "os_family/{{ ansible_os_family }}.yml "
 
 - name: adding sudo template
@@ -8,6 +8,6 @@
     dest="/etc/sudoers.d/{{ item.name }}"
     validate="visudo -cf %s"
   with_items:
-    - {f: "main.j2", name: "{{ users.main.name }}"}
-    - {f: "super.j2", name: "{{ users.super.name}}" }
+    - {f: "main.j2", name: "{{ user.name }}"}
+    - {f: "permissions.j2", name: "_permissions" }
 
