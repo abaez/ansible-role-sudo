@@ -1,0 +1,11 @@
+---
+- name: Install sudo
+  zypper: name=sudo state=present
+
+- name:
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^Defaults targetpw'
+    line: '#Defaults targetpw'
+    validate: 'visudo -cf %s'
