@@ -27,7 +27,26 @@ The user in reference to this role gains the ability to run the shell of both **
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The role has a couple of variables that should be changed. These variables are primarily the **admin** and the **devel** system account you want to use for the role to function properly. The listing below shows the commands with their default settings:
+
+``` yaml
+# normal user to have shell devel, admin access
+user:
+  name: some
+
+devel:
+  # name of the devel user:group
+  name: devel
+  # default shell for devel
+  shell: /usr/bin/fish
+
+admin:
+  # name of the admin user:group
+  name: admin
+  # default shell for admin
+  shell: /usr/bin/fish
+```
+
 
 Requirements
 ------------
