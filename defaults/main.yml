@@ -1,5 +1,8 @@
 ---
 
+user:
+  name: some
+
 devel:
   name: devel
   shell: /usr/bin/fish
