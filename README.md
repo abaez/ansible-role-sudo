@@ -51,17 +51,18 @@ admin:
 Requirements
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+The role does need some type of [user] defined. So it should go without saying that it does require [user] to be declared prior to the role being used. Otherwise, you need to define your user similarly to the [user] role.
 
 Usage
 -----
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+You should set up and define the defaults for the role. Along with it, you should also define the user.name. Then you can append the following to your playbook:
 
 ``` yaml
 - hosts: servers
     roles:
-        - { role: username.rolename, x: 42 }
+        - abaez.users
+        - { role: abaez.sudo, user.name: ale }
 ```
 
 Author Information
