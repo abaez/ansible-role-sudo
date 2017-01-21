@@ -1,3 +1,9 @@
 ---
 
+devel:
+  name: devel
+  shell: /usr/bin/fish
 
+admin:
+  name: admin
+  shell: /usr/bin/fish

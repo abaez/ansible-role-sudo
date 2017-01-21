@@ -1,0 +1,17 @@
+---
+
+- name: development user
+  user:
+    name="{{ devel.name }}"
+    shell="{{ devel.shell }}"
+    system=yes
+    groups=devel
+    state=present
+
+- name: administrator user
+  user:
+    name="{{ admin.name }}"
+    shell="{{ admin.shell }}"
+    system=yes
+    groups=network,power,storage,admin
+    state=present
