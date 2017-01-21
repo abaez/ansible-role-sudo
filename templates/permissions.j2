@@ -11,5 +11,6 @@ Cmnd_Alias  PKGMAN      =   {{ conf.pkgman }}
 %power      ALL         =   (root)  NOPASSWD: POWER
 %network    ALL         =   (root)  NETWORK
 %storage    ALL         =   (root)  STORAGE
-admin       ALL         =   (root)  SYSTEMD, KILL, FIREWALL
-devel	    ALL         =   (root)  PKGMAN
+
+{{ admin.name }}  ALL   =   (root) SYSTEMD, KILL, FIREWALL
+{{ devel.name }}  ALL   =   (root) PKGMAN

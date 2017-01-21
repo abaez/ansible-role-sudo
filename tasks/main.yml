@@ -5,12 +5,11 @@
 - name: create sudo users
   include: "users.yml"
 
-- name: adding sudo template
+- name: adding sudo templates
   template:
     src="{{ item.f }}"
     dest="/etc/sudoers.d/{{ item.name }}"
     validate="visudo -cf %s"
   with_items:
-    - {f: "main.j2", name: "{{ user.name }}"}
+    - {f: "user.j2", name: "{{ user.name }}"}
     - {f: "permissions.j2", name: "_permissions" }
-
