@@ -1,0 +1,3 @@
+conf:
+  pkgman: /usr/bin/apt
+  network: /usr/bin/nmcli

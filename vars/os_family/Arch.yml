@@ -1,0 +1,4 @@
+---
+conf:
+  network: /usr/bin/netctl
+  pkgman: /usr/bin/pacman

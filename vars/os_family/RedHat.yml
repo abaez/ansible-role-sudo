@@ -1,0 +1,9 @@
+conf:
+  network: /usr/bin/nmcli
+  pkgman: /usr/bin/yum
+when: ansible_distribution != "Fedora"
+
+conf:
+  network: /usr/bin/nmcli
+  pkgman: /usr/bin/dnf
+when: ansible_distribution == "Fedora"

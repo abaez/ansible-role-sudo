@@ -1,0 +1,4 @@
+---
+conf:
+  network: /usr/bin/nmcli
+  pkgman: /usr/bin/zypper

@@ -1,0 +1,4 @@
+---
+conf:
+  network: /sbin/ip
+  pkgman: /sbin/apk
