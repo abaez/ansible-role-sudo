@@ -78,4 +78,4 @@ Author Information
 [4]: https://wiki.archlinux.org/index.php/Sudo#Sudoers_default_file_permissions
 
 
-[role]: https://bitbucket.org/a_baez/ansible-role-users
+[user]: https://bitbucket.org/a_baez/ansible-role-users
