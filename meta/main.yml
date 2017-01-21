@@ -50,14 +50,15 @@ galaxy_info:
     versions:
     - all
 
-  galaxy_tags: 
+  galaxy_tags:
     - user
     - permissions
     - sudo
     - system
     - administration
 
-dependencies: []
+dependencies:
+  - abaez.users
   # List your role dependencies here, one per line.
   # Be sure to remove the '[]' above if you add dependencies
   # to this list.
