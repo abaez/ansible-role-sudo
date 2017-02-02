@@ -2,9 +2,9 @@
 - name: Install sudo
   zypper: name=sudo state=present
 
-- name:
+- name: Disable targetpw
   lineinfile:
-    path: /etc/sudoers
+    name: /etc/sudoers
     state: present
     regexp: '^Defaults targetpw'
     line: '#Defaults targetpw'
