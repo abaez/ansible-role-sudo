@@ -5,7 +5,6 @@
     name="{{ devel.name }}"
     shell="{{ devel.shell }}"
     system=yes
-    groups="{{ devel.name }}"
     state=present
 
 - name: administrator user
@@ -13,5 +12,5 @@
     name="{{ admin.name }}"
     shell="{{ admin.shell }}"
     system=yes
-    groups=network,power,storage,"{{ admin.name }}"
+    groups=network,power,storage
     state=present
