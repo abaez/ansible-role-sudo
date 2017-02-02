@@ -2,15 +2,16 @@
 
 - name: development user
   user:
-    name="{{ devel.name }}"
-    shell="{{ devel.shell }}"
-    system=yes
-    state=present
+    name: "{{ devel.name }}"
+    shell: "{{ devel.shell }}"
+    system: yes
+    state: present
+
 
 - name: administrator user
   user:
-    name="{{ admin.name }}"
-    shell="{{ admin.shell }}"
-    system=yes
-    groups=network,power,storage
-    state=present
+    name: "{{ admin.name }}"
+    shell: "{{ admin.shell }}"
+    system: yes
+    groups: network,power,storage
+    state: present
