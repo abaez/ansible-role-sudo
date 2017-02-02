@@ -7,11 +7,19 @@
     system: yes
     state: present
 
+- name: make sure all required groups exist
+  group:
+    name: "{{ item }}"
+  with_items:
+    - network
+    - power
+    - storage
 
 - name: administrator user
   user:
     name: "{{ admin.name }}"
     shell: "{{ admin.shell }}"
     system: yes
+    append: yes
     groups: network,power,storage
     state: present
