@@ -2,6 +2,9 @@
 - name: making sure sudo is installed and configured
   include: "os_family/{{ ansible_os_family }}.yml "
 
+- name: make sure using the correct vars
+  include_vars: "os_family/{{ ansible_os_family }}.yml "
+
 - name: create sudo users
   include: "users.yml"
 

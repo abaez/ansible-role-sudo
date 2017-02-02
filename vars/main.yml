@@ -1,4 +1,0 @@
----
-
-- include_vars:
-  file: "os_family/{{ ansible_os_family }}.yml"
