@@ -1,12 +1,14 @@
 ---
 
-user:
-  name: some
+# normal user to have shell devel, admin access
+user_name: some
 
-devel:
-  name: devel
-  shell: /usr/bin/fish
+# name of the devel user:group
+devel_name: devel
+# default shell for devel
+devel_shell: /usr/bin/fish
 
-admin:
-  name: admin
-  shell: /usr/bin/fish
+# name of the admin user:group
+admin_name: admin
+# default shell for admin
+admin_shell: /usr/bin/fish

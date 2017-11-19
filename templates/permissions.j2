@@ -12,7 +12,7 @@ Cmnd_Alias  PKGMAN      =   {{ conf.pkgman }}
 %network    ALL         =   (root)  NETWORK
 %storage    ALL         =   (root)  STORAGE
 
-{{ admin.name }}  ALL   =   (root) SYSTEMD, KILL, FIREWALL
-{{ devel.name }}  ALL   =   (root) PKGMAN
+{{ admin_name }}  ALL   =   (root) SYSTEMD, KILL, FIREWALL
+{{ devel_name }}  ALL   =   (root) PKGMAN
 
-{{ user.name }} ALL = ({{ devel.name }}) SHELL, ({{ admin.name }}) SHELL
+{{ user_name }} ALL = ({{ devel_name }}) SHELL, ({{ admin_name }}) SHELL

@@ -2,8 +2,8 @@
 
 - name: development user
   user:
-    name: "{{ devel.name }}"
-    shell: "{{ devel.shell }}"
+    name: "{{ devel_name }}"
+    shell: "{{ devel_shell }}"
     system: yes
     state: present
 
@@ -17,8 +17,8 @@
 
 - name: administrator user
   user:
-    name: "{{ admin.name }}"
-    shell: "{{ admin.shell }}"
+    name: "{{ admin_name }}"
+    shell: "{{ admin_shell }}"
     system: yes
     append: yes
     groups: network,power,storage

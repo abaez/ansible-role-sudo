@@ -30,21 +30,20 @@ Role Variables
 The role has a couple of variables that should be changed. These variables are primarily the **admin** and the **devel** system account you want to use for the role to function properly. The listing below shows the commands with their default settings:
 
 ``` yaml
+---
+
 # normal user to have shell devel, admin access
-user:
-  name: some
+user_name: some
 
-devel:
-  # name of the devel user:group
-  name: devel
-  # default shell for devel
-  shell: /usr/bin/fish
+# name of the devel user:group
+devel_name: devel
+# default shell for devel
+devel_shell: /usr/bin/fish
 
-admin:
-  # name of the admin user:group
-  name: admin
-  # default shell for admin
-  shell: /usr/bin/fish
+# name of the admin user:group
+admin_name: admin
+# default shell for admin
+admin_shell: /usr/bin/fish
 ```
 
 
@@ -56,13 +55,14 @@ The role does need some type of [user] defined. So it should go without saying t
 Usage
 -----
 
-You should set up and define the defaults for the role. Along with it, you should also define the user.name. Then you can append the following to your playbook:
+You should set up and define the defaults for the role. Along with it, you should also define the `user_name`. Then you can append the following to your playbook:
 
 ``` yaml
 - hosts: servers
     roles:
         - abaez.users
-        - { role: abaez.sudo, user.name: ale }
+        - { role: abaez.sudo, user_name: ale }
+
 ```
 
 Author Information
