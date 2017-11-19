@@ -1,18 +1,18 @@
 ---
-- name: making sure sudo is installed and configured
-  include: "os_family/{{ ansible_os_family }}.yml "
-
 - name: make sure using the correct vars
   include_vars: "os_family/{{ ansible_os_family }}.yml "
 
+- name: making sure sudo is installed and configured
+  include_tasks: "os_family/{{ ansible_os_family }}.yml "
+
 - name: create sudo users
-  include: "users.yml"
+  include_tasks: "users.yml"
 
 - name: adding sudo templates
   template:
-    src="{{ item.f }}"
-    dest="/etc/sudoers.d/{{ item.name }}"
-    validate="visudo -cf %s"
+    src: "{{ item.f }}"
+    dest: "/etc/sudoers.d/{{ item.name }}"
+    validate: "visudo -cf %s"
   with_items:
     - {f: "user.j2", name: "{{ user.name }}"}
     - {f: "permissions.j2", name: "_permissions" }
