@@ -14,5 +14,4 @@
     dest: "/etc/sudoers.d/{{ item.name }}"
     validate: "visudo -cf %s"
   with_items:
-    - {f: "user.j2", name: "{{ user.name }}"}
     - {f: "permissions.j2", name: "_permissions" }

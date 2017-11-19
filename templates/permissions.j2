@@ -14,3 +14,5 @@ Cmnd_Alias  PKGMAN      =   {{ conf.pkgman }}
 
 {{ admin.name }}  ALL   =   (root) SYSTEMD, KILL, FIREWALL
 {{ devel.name }}  ALL   =   (root) PKGMAN
+
+{{ user.name }} ALL = ({{ devel.name }}) SHELL, ({{ admin.name }}) SHELL
